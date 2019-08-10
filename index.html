@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            margin: 0 0 50px;
+            text-align: center;
+            box-sizing: border-box;
+            color: rgb(174, 205, 196);
+            background-color: rgb(242, 242, 242);
+        }
+        
+        header {
+            background-image: url("images/rawpixel-743124-unsplash.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin-bottom: 5%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            box-shadow: 0px 5px 5px rgba(174, 205, 196, 0.4);
+        }
+        
+        header p {
+            display: inline-block;
+            position: relative;
+            min-width: 20%;
+            min-height: 15%;
+            bottom: -2.3em;
+            padding: .5em 1em;
+            font-size: 2.5vw;
+            background-color: rgb(242, 242, 242);
+            color: rgb(119, 136, 153);
+            box-shadow: 0px 5px 5px rgba(174, 205, 196, 0.4), 0 -5px 5px rgb(242, 242, 242, .7);
+            border-radius: 25%;
+        }
+        
+        h1 {
+            position: relative;
+            top: -.7em;
+            background-color: rgba(255, 255, 255, .5);
+            font-size: 5vw;
+        }
+        
+        .selectOption {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            transition: display 5s ease-in;
+            margin: 40px auto;
+        }
+        
+        .selectOption img {
+            background-color: rgb(174, 205, 196);
+            margin: 2%;
+            border-right: 3px solid rgb(242, 242, 242);
+            border-bottom: 3px solid rgb(242, 242, 242);
+            border-radius: 25%;
+            box-shadow: 5px 4px rgba(174, 205, 196, .4);
+            transition: opacity 1s ease-out;
+        }
+        
+        .resultsSection {
+            display: none;
+            min-width: 33%;
+            order: 1;
+            padding: 2%;
+            line-height: .5em;
+            font-size: 1.3em;
+            font-weight: bolder;
+            color: rgb(119, 136, 153);
+            font-family: 'Amatic SC', cursive;
+        }
+        
+        button {
+            position: relative;
+            min-width: 50%;
+            min-height: 50px;
+            margin-bottom: 40px;
+            padding: 2vw;
+            font-size: 4vw;
+            font-weight: bold;
+            background-color: rgba(243, 217, 217, .6);
+            color: rgb(119, 136, 153);
+            border: none;
+            border: 3px solid rgb(242, 242, 242);
+            border-radius: 50%;
+            box-shadow: 5px 4px rgba(174, 205, 196, .4), 4px -4px 5px rgba(174, 205, 196, .2);
+        }
+        
+        button:focus {
+            outline: 0;
+        }
+        
+        footer {
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            font-size: .7em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            background-color: rgba(243, 217, 217, .6);
+            color: rgb(79, 192, 160);
+            border-top: 2px solid rgb(174, 205, 196);
+            box-shadow: 0px -5px rgba(174, 205, 196, 0.4);
+        }
+        
+        footer a {
+            font-weight: lighter;
+            color: rgb(79, 192, 160);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ROCK - PAPER - SCISSORS</h1>
+        <p>CHOOSE ONE:</p>
+    </header>
+    <div class="selectOption">
+        <img data-option="rock" src="images/rock.png" alt="rock" title="rock">
+        <img data-option="paper" src="images/paper.png" alt="paper" title="paper">
+        <img data-option="scissors" src="images/scissors.png" alt="scissors" title="scissors">
+        <div class='resultsSection'>
+            <h3></h3>
+            <p>rounds: <span></span></p>
+            <p>wins: <span></span></p>
+            <p>ties: <span></span></p>
+            <p>lost: <span></span></p>
+        </div>
+    </div>
+    <button>Let's play!</button>
+
+
+    <footer>
+        Rock, paper, scissors images by: <a href="//commons.wikimedia.org/wiki/User:Sertion" title="User:Sertion">Sertion</a> - Photo by <a href="https://sv.wikipedia.org/wiki/user:Fluff" class="extiw" title="sv:user:Fluff">Fluff</a>, modified by
+        <a href="//commons.wikimedia.org/wiki/User:Sertion" title="User:Sertion">Sertion</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=6867678">Link</a>        & Background image by:
+        <a style="background-color:rgb(174, 205, 196);color:white;text-decoration:none;padding:2px 2px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:.7em;font-weight:bold;line-height:.7em;display:inline-block;border-radius:3px"
+            href="https://unsplash.com/@rawpixel?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from rawpixel"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:.7em;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span>
+            <span style="display:inline-block;padding:2px 3px">rawpixel</span>
+        </a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
