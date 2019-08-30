@@ -1,7 +1,7 @@
 # Rock Paper Scissors Game
 
 ## About this project
-Rock paper scissors Game. A simple game written in JavaScript.
+Rock paper scissors game. A simple game written in JavaScript.
 
 ### Technology used:
 - HTML 
